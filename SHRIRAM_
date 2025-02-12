@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35 Day Study Plan with Daily Routine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td input[type="checkbox"] {
+            margin: 0;
+            cursor: pointer;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .routine-table {
+            margin-top: 40px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .routine-table th, .routine-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .routine-table th {
+            background-color: #f2f2f2;
+        }
+        .routine-table td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>35 Day Study Plan with Daily Routine</h1>
+        
+        <!-- Study Plan Table -->
+        <h2>Study Plan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Subject</th>
+                    <th>Chapter</th>
+                    <th>Completed?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add rows for each day with checkboxes -->
+                <tr>
+                    <td>Day 1 (13th Feb)</td>
+                    <td>Physics</td>
+                    <td>SHM & Waves</td>
+                    <td><input type="checkbox" id="day1" name="day1"></td>
+                </tr>
+                <tr>
+                    <td>Day 2 (14th Feb)</td>
+                    <td>Physics</td>
+                    <td>Mechanical Properties of Fluids</td>
+                    <td><input type="checkbox" id="day2" name="day2"></td>
+                </tr>
+                <tr>
+                    <td>Day 3 (15th Feb)</td>
+                    <td>Physics</td>
+                    <td>Thermal Properties of Matter</td>
+                    <td><input type="checkbox" id="day3" name="day3"></td>
+                </tr>
+                <!-- Continue for all days -->
+                <tr>
+                    <td>Day 35 (19th Mar)</td>
+                    <td>IT</td>
+                    <td>Final Revision</td>
+                    <td><input type="checkbox" id="day35" name="day35"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Daily Routine Table -->
+        <h2>Daily Routine</h2>
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5:00 AM - 6:00 AM</td>
+                    <td>Wake up, Freshen up, Breakfast</td>
+                </tr>
+                <tr>
+                    <td>6:00 AM - 9:00 AM</td>
+                    <td>Study Session 1 (Morning)</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM - 12:00 PM</td>
+                    <td>Study Session 2 (Morning)</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM - 1:00 PM</td>
+                    <td>Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM - 4:00 PM</td>
+                    <td>Relax/Short Break (No study)</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 6:30 PM</td>
+                    <td>Study Session 3 (Evening)</td>
+                </tr>
+                <tr>
+                    <td>6:30 PM - 9:00 PM</td>
+                    <td>Dinner Break / Relax</td>
+                </tr>
+                <tr>
+                    <td>9:00 PM - 12:00 AM</td>
+                    <td>Study Session 4 (Night)</td>
+                </tr>
+                <tr>
+                    <td>12:00 AM - 1:00 AM</td>
+                    <td>Wrap up study and rest</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
