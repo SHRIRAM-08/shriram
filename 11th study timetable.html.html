@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35 Day Study Plan with Daily Routine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e6ffe6;
+        }
+        .checkbox {
+            transform: scale(1.5);
+        }
+        .routine-table {
+            margin-top: 40px;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+        .routine-table th, .routine-table td {
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ddd;
+        }
+        .routine-table th {
+            background-color: #f2f2f2;
+        }
+        .section-title {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Heading -->
+        <h1>35 Day Study Plan with Daily Routine</h1>
+
+        <!-- Study Plan Table -->
+        <div class="section-title">Study Plan</div>
+        <table id="study-plan">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Subject</th>
+                    <th>Chapter</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add Rows Dynamically with JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Daily Routine Table -->
+        <div class="section-title">Daily Routine</div>
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5:00 AM - 6:00 AM</td>
+                    <td>Wake Up, Freshen Up, Breakfast</td>
+                </tr>
+                <tr>
+                    <td>6:00 AM - 9:00 AM</td>
+                    <td>Study Session 1</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM - 12:00 PM</td>
+                    <td>Study Session 2</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM - 1:00 PM</td>
+                    <td>Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM - 4:00 PM</td>
+                    <td>Relax (No Study)</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 6:30 PM</td>
+                    <td>Study Session 3</td>
+                </tr>
+                <tr>
+                    <td>6:30 PM - 9:00 PM</td>
+                    <td>Dinner Break</td>
+                </tr>
+                <tr>
+                    <td>9:00 PM - 12:00 AM</td>
+                    <td>Study Session 4</td>
+                </tr>
+                <tr>
+                    <td>12:00 AM - 1:00 AM</td>
+                    <td>Wrap Up, Rest</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Button to Update Progress -->
+        <a href="javascript:void(0)" class="btn" onclick="updateProgress()">Update Progress</a>
+    </div>
+
+    <script>
+        // Study Plan Data (Day, Subject, Chapter)
+        const studyData = [
+            { day: "Day 1 (13th Feb)", subject: "Physics", chapter: "SHM & Waves" },
+            { day: "Day 2 (14th Feb)", subject: "Physics", chapter: "Mechanical Properties of Fluids" },
+            { day: "Day 3 (15th Feb)", subject: "Physics", chapter: "Thermal Properties of Matter" },
+            { day: "Day 4 (16th Feb)", subject: "Physics", chapter: "Kinetic Theory of Gases" },
+            { day: "Day 5 (17th Feb)", subject: "Physics", chapter: "Thermodynamics" },
+            { day: "Day 6 (18th Feb)", subject: "Physics", chapter: "Waves" },
+            { day: "Day 7 (19th Feb)", subject: "Physics", chapter: "Quick Revision" },
+            { day: "Day 8 (20th Feb)", subject: "Chemistry", chapter: "Chemical Thermodynamics" },
+            { day: "Day 9 (21st Feb)", subject: "Chemistry", chapter: "Electrochemistry" },
+            { day: "Day 10 (22nd Feb)", subject: "Chemistry", chapter: "Solid State" },
+            { day: "Day 11 (23rd Feb)", subject: "Chemistry", chapter: "Chemical Kinetics" },
+            { day: "Day 12 (24th Feb)", subject: "Chemistry", chapter: "Solution" },
+            { day: "Day 13 (25th Feb)", subject: "Chemistry", chapter: "General Principles of Metallurgy" },
+            { day: "Day 14 (26th Feb)", subject: "Chemistry", chapter: "Quick Revision" },
+            { day: "Day 15 (27th Feb)", subject: "Mathematics", chapter: "Probability" },
+            { day: "Day 16 (28th Feb)", subject: "Mathematics", chapter: "Matrices" },
+            { day: "Day 17 (29th Feb)", subject: "Mathematics", chapter: "Determinants" },
+            { day: "Day 18 (1st Mar)", subject: "Mathematics", chapter: "Applications of Derivatives" },
+            { day: "Day 19 (2nd Mar)", subject: "Mathematics", chapter: "Definite Integration" },
+            { day: "Day 20 (3rd Mar)", subject: "Mathematics", chapter: "Indefinite Integration" },
+            { day: "Day 21 (4th Mar)", subject: "Mathematics", chapter: "Quick Revision" },
+            { day: "Day 22 (5th Mar)", subject: "Biology", chapter: "Photosynthesis in Higher Plants" },
+            { day: "Day 23 (6th Mar)", subject: "Biology", chapter: "Respiration in Plants" },
+            { day: "Day 24 (7th Mar)", subject: "Biology", chapter: "Body Fluids and Circulation" },
+            { day: "Day 25 (8th Mar)", subject: "Biology", chapter: "Excretory Products and Their Elimination" },
+            { day: "Day 26 (9th Mar)", subject: "Biology", chapter: "Locomotion and Movement" },
+            { day: "Day 27 (10th Mar)", subject: "Biology", chapter: "Neural Control and Coordination" },
+            { day: "Day 28 (11th Mar)", subject: "Biology", chapter: "Quick Revision" },
+            { day: "Day 29 (12th Mar)", subject: "IT", chapter: "HTML & CSS Basics" },
+            { day: "Day 30 (13th Mar)", subject: "IT", chapter: "JavaScript Fundamentals" },
+            { day: "Day 31 (14th Mar)", subject: "IT", chapter: "JavaScript Advanced" },
+            { day: "Day 32 (15th Mar)", subject: "IT", chapter: "Web Development with JS" },
+            { day: "Day 33 (16th Mar)", subject: "IT", chapter: "Backend Basics" },
+            { day: "Day 34 (17th Mar)", subject: "IT", chapter: "Project Work" },
+            { day: "Day 35 (18th Mar)", subject: "IT", chapter: "Final Revision" }
+        ];
+
+        // Render Study Plan Table dynamically
+        const studyPlanTable = document.getElementById('study-plan').getElementsByTagName('tbody')[0];
+        studyData.forEach((data, index) => {
+            let row = studyPlanTable.insertRow();
+            row.innerHTML = `
+                <td>${data.day}</td>
+                <td>${data.subject}</td>
+                <td>${data.chapter}</td>
+                <td><input type="checkbox" class="checkbox" id="checkbox-${index}" onclick="updateProgress()"></td>
+            `;
+        });
+
+        // Update progress button functionality
+        function updateProgress() {
+            let checkedCount = document.querySelectorAll('.checkbox:checked').length;
+            alert(`You have completed ${checkedCount} out of ${studyData.length} tasks.`);
+        }
+    </script>
+
+</body>
+</html>
